@@ -1,7 +1,11 @@
 const express = require('express')
-const app = express();
-const port = 8080;
+require('dotenv').config();
 
+console.log(">>> check env: ", process.env);
+
+const app = express();
+const port = process.env.PORT || 8888;
+const hostname = process.env.HOST_NAME
 app.set('views', './src/views')
 app.set('view engine', 'ejs')
 
@@ -14,6 +18,6 @@ app.get('/HopeIT', (req, res) => {
     res.render('sample.ejs')
 })
 
-app.listen(port, () =>{
+app.listen(port, hostname, () =>{
     console.log('server đang chạy')
 })
