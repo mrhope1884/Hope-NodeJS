@@ -6,11 +6,17 @@
   "author": "Hope",
   "type": "commonjs",
   "main": "server.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/mrhope1884/Hope-NodeJS"
+  },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/server.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "3.1.8",
     "express": "^5.2.1"
   }
